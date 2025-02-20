@@ -1,0 +1,666 @@
+/* Introduction */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a2940, #2d3b4f);
+    color: #f4d03f; /* Jaune doré */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#intro-link {
+    text-decoration: none;
+    color: #f4d03f;
+    transition: color 0.3s ease;
+}
+
+#intro-link:hover {
+    color: #ffffff;
+}
+
+/* Caché initialement */
+.hidden {
+    display: none;
+}
+
+/* Contenu principal */
+#main-content {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #243c5a;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f4d03f;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1a2940, #2d3b4f);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #f4d03f; /* Ligne dorée */
+}
+
+header .header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+header .header-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #243c5a;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #f4d03f;
+}
+
+/* Sections */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #1a2940; /* Bleu nuit */
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Section Modules */
+.modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.module {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.module:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.module img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.module:hover img {
+    transform: scale(1.1);
+}
+
+.module h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(26, 41, 64, 0.8); /* Fond semi-transparent bleu nuit */
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.module:hover h3 {
+    background: rgba(244, 208, 63, 0.9); /* Fond doré au survol */
+    color: #1a2940;
+}
+
+/* Polices globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Titres principaux */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF; /* Bleu nuit */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1a2940, #2d3b4f);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header .header-content h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700;
+}
+
+header .header-content p {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #243c5a;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #f4d03f;
+}
+
+/* Sections */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p, ul {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: disc;
+    margin: 20px auto;
+    padding: 0 40px;
+    text-align: left;
+}
+
+/* Projets */
+.project {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Animation au défilement */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Effet au survol des modules */
+.module {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.module:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.module img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.module:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #1a2940;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+
+#scroll-to-top:hover {
+    background: #f4d03f;
+    transform: scale(1.3);
+}
+
+
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #1a2940; /* Bleu nuit */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home:hover {
+    background-color: #f4d03f; /* Doré */
+    transform: scale(1.1); /* Effet de zoom */
+}
+
+
+
+/* Section Contact */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrer verticalement dans la fenêtre */
+    background-color: #f8f9fa; /* Fond léger pour faire ressortir le formulaire */
+}
+
+/* Rectangle compact horizontal */
+.form-container.horizontal.compact {
+    width: 600px; 
+    background: #ffffff; /* Fond blanc */
+    border: 2px solid #1a2940; /* Bordure bleu nuit */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    padding: 20px;
+    text-align: left;
+}
+
+/* Titre */
+.form-container h2 {
+    color: #1a2940; /* Bleu nuit */
+    font-size: 1.5em; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Alignement des champs */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Champs du formulaire */
+form label {
+    font-weight: bold;
+    color: #1a2940;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form select, form input, form textarea {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9em;     background: #f8f9fa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet de focus */
+form select:focus, form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #1a2940; /* Bleu nuit */
+    box-shadow: 0 0 5px rgba(26, 41, 64, 0.5); /* Effet focus */
+}
+
+/* Bouton Envoyer */
+.btn-submit {
+    background: #1a2940; /* Bleu nuit */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: #f4d03f; /* Doré */
+    transform: scale(1.05); /* Zoom au survol */
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Timeline */
+#timeline {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa; /* Fond clair */
+}
+
+#timeline h2 {
+    color: #1a2940; /* Bleu nuit */
+    font-size: 2em; /* Taille réduite */
+    margin-bottom: 20px;
+}
+
+/* Conteneur de la frise */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 20px auto;
+    max-width: 900px; 
+    padding: 10px 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #1a2940; /* Ligne centrale bleu nuit */
+    z-index: 1;
+}
+
+/* Élément de la frise */
+.timeline-item {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+    padding: 0 5px; /* Espacement réduit */
+}
+
+.timeline-date {
+    background: #f4d03f; /* Rond doré */
+    color: white;
+    font-weight: bold;
+    font-size: 1em; /* Réduction de la taille */
+    padding: 8px; /* Taille du rond réduite */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content {
+    background: #ffffff;
+    border: 1px solid #1a2940; 
+    border-radius: 6px; 
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    font-size: 0.9em;}
+
+.timeline-content h3 {
+    color: #1a2940; /* Bleu nuit */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4; }
+
+
+
+
+/* Section Compétences */
+#skills {
+    padding: 50px 20px;
+    background: #f8f9fa; /* Fond clair */
+    text-align: center;
+}
+
+#skills h2 {
+    color: #1a2940; /* Bleu nuit */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #1a2940;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Conteneur des compétences */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Carte individuelle */
+.skill {
+    background: #ffffff;
+    border: 2px solid #1a2940; /* Bordure bleu nuit */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre de compétence */
+.skill h3 {
+    color: #1a2940; /* Bleu nuit */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Description de compétence */
+.skill p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Icône */
+.skill-icon {
+    font-size: 2.5em;
+    color: #f4d03f; /* Doré */
+    margin-top: 15px;
+    display: block;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background: url('images/fond-blanc.jpg') no-repeat center center fixed;
+    background-size: cover; }
+
+
+
+
